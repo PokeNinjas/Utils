@@ -38,7 +38,7 @@ public class RedisRequest<Response> implements IEvent {
     public static @Nullable RedisRequest<?> deserialize(RedisManager redisManager, String data) {
         RedisRequest<?> event = redisManager.getGson().execute().fromJson(data, RedisRequest.class);
 
-        if(event == null) {
+        if (event == null) {
             return null;
         }
 

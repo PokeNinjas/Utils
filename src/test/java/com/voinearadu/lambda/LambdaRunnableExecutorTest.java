@@ -2,8 +2,6 @@ package com.voinearadu.lambda;
 
 import com.voinearadu.lambda.lambda.*;
 import lombok.SneakyThrows;
-import org.apache.log4j.BasicConfigurator;
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
@@ -16,10 +14,6 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class LambdaRunnableExecutorTest {
 
-    @BeforeAll
-    public static void init() {
-        BasicConfigurator.configure();
-    }
     @Test
     public void testLambdaExecutors() {
         ArgLambdaExecutor<List<String>> addEmpty = (list) -> list.add("empty");

@@ -3,7 +3,6 @@ package com.voinearadu.event_manager;
 import com.voinearadu.event_manager.dto.TestComplexEvent;
 import com.voinearadu.event_manager.dto.TestEvent;
 import com.voinearadu.event_manager.manager.TestEventListener;
-import org.apache.log4j.BasicConfigurator;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
@@ -18,7 +17,6 @@ public class EventManagerTests {
 
     @BeforeAll
     public static void setup() {
-        BasicConfigurator.configure();
         eventManager.register(new TestEventListener());
     }
 
